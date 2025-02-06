@@ -225,3 +225,31 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+/* Hero Section */
+.hero {
+    background-image: url('path_to_your_image.jpg'); /* Replace with the actual path to your background image */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Make the hero section take up the full viewport height */
+    color: white; /* White text for visibility */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
