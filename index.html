@@ -4,15 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoSpin - Sustainable Textile Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
-        /* Modern Typography */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
 
         :root {
-            /* Color Palette */
             --primary: #00875A;
             --primary-light: #00A36C;
             --secondary: #2D3436;
@@ -21,9 +16,6 @@
             --surface: #F8F9FA;
             --text: #2D3436;
             --text-light: #6C757D;
-            --success: #00875A;
-            --warning: #FF9F1C;
-            --error: #FF5252;
         }
 
         * {
@@ -36,15 +28,8 @@
             font-family: 'Inter', sans-serif;
             color: var(--text);
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-        }
-
-        /* Navbar Styles */
         .navbar {
             position: fixed;
             width: 100%;
@@ -53,7 +38,6 @@
             z-index: 1000;
             padding: 1rem 0;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
         }
 
         .navbar-content {
@@ -70,7 +54,6 @@
             font-size: 1.8rem;
             font-weight: 700;
             color: var(--primary);
-            text-decoration: none;
         }
 
         .nav-links {
@@ -83,66 +66,35 @@
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
-            position: relative;
         }
 
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--primary);
-            transition: width 0.3s ease;
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+        .nav-links a:hover {
+            color: var(--primary);
         }
 
         .hamburger {
             display: none;
             cursor: pointer;
-            font-size: 1.5rem;
         }
 
-        /* Hero Section */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             padding: 0 2rem;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            width: 200%;
-            height: 200%;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.1;
-            animation: slide 20s linear infinite;
-        }
-
-        @keyframes slide {
-            0% { transform: translate(0, 0); }
-            100% { transform: translate(-50%, -50%); }
+            color: white;
         }
 
         .hero-content {
             max-width: 800px;
-            color: white;
-            position: relative;
-            z-index: 1;
+            padding-top: 80px;
         }
 
         .hero-content h1 {
+            font-family: 'Space Grotesk', sans-serif;
             font-size: 4rem;
             margin-bottom: 1.5rem;
             line-height: 1.2;
@@ -163,15 +115,13 @@
             font-weight: 600;
             border-radius: 50px;
             cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease;
         }
 
         .cta-button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
-        /* Section Styles */
         .section {
             padding: 6rem 2rem;
             max-width: 1200px;
@@ -182,18 +132,7 @@
             text-align: center;
             font-size: 2.5rem;
             margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--primary);
+            font-family: 'Space Grotesk', sans-serif;
         }
 
         .grid {
@@ -215,11 +154,11 @@
         }
 
         .card h3 {
-            margin-bottom: 1rem;
             color: var(--primary);
+            margin-bottom: 1rem;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        /* Stats Section */
         .stats {
             background: var(--primary);
             color: white;
@@ -238,9 +177,9 @@
         .stat-item h3 {
             font-size: 3rem;
             margin-bottom: 0.5rem;
+            font-family: 'Space Grotesk', sans-serif;
         }
 
-        /* Team Section */
         .team-member {
             text-align: center;
         }
@@ -254,7 +193,6 @@
             border: 3px solid var(--primary);
         }
 
-        /* Footer */
         footer {
             background: var(--secondary);
             color: white;
@@ -263,11 +201,11 @@
         }
 
         footer .cta-button {
+            margin-top: 1rem;
             background: var(--primary);
             color: white;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -288,59 +226,110 @@
     </style>
 </head>
 <body>
-    <!-- Your existing HTML content remains the same -->
+    <nav class="navbar">
+        <div class="navbar-content">
+            <div class="logo">EcoSpin</div>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#solution">Solution</a>
+                <a href="#market">Market</a>
+                <a href="#innovation">Innovation</a>
+                <a href="#team">Team</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="hamburger">☰</div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Spinning Waste into Wonder</h1>
+            <p>Transforming plastic waste into high-quality recycled yarn and artificial wool, for a sustainable tomorrow.</p>
+            <button class="cta-button">Learn More</button>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <h2 class="section-title">About EcoSpin</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>The Problem</h3>
+                <p>Uganda generates 600 tonnes of plastic waste daily, with only 6% being collected for recycling. This poses significant threats to our environment, waterways, and public health.</p>
+                <img src="images/plastic.jpeg" alt="Plastic pollution" style="width: 100%; margin-top: 1rem;">
+            </div>
+            <div class="card">
+                <h3>Our Solution</h3>
+                <p>EcoSpin transforms plastic waste into high-quality recycled yarn and artificial wool, providing sustainable alternatives for the textile industry while reducing environmental pollution.</p>
+                <img src="images/recycling.jpg" alt="Recycling process" style="width: 100%; margin-top: 1rem;">
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h3>600</h3>
+                <p>Tonnes of daily plastic waste</p>
+            </div>
+            <div class="stat-item">
+                <h3>6%</h3>
+                <p>Current recycling rate</p>
+            </div>
+            <div class="stat-item">
+                <h3>$120B</h3>
+                <p>Global market by 2030</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="market" class="section">
+        <h2 class="section-title">Market Opportunity</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Target Market</h3>
+                <ul style="list-style-position: inside;">
+                    <li>Textile manufacturers</li>
+                    <li>Fashion designers</li>
+                    <li>Craft enthusiasts</li>
+                    <li>Educational institutions</li>
+                    <li>Government agencies</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Market Growth</h3>
+                <p>The global recycled textile market is projected to reach $6.87 billion by 2032, with a CAGR of 2.8%.</p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>Join us in our mission to create a sustainable future</p>
+            <button class="cta-button">Get in Touch</button>
+        </div>
+    </footer>
+
     <script>
-        // Initialize GSAP ScrollTrigger
-        gsap.registerPlugin(ScrollTrigger);
-
-        // Navbar scroll effect
-        window.addEventListener('scroll', () => {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.style.padding = '0.5rem 0';
-                navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-            } else {
-                navbar.style.padding = '1rem 0';
-                navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            }
-        });
-
-        // Animate sections on scroll
-        gsap.utils.toArray('.section').forEach(section => {
-            gsap.from(section, {
-                opacity: 0,
-                y: 50,
-                duration: 1,
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    end: 'top 20%',
-                    scrub: 1
-                }
-            });
-        });
-
-        // Stats counter animation
-        gsap.utils.toArray('.stat-item h3').forEach(stat => {
-            const value = parseFloat(stat.textContent);
-            gsap.from(stat, {
-                textContent: 0,
-                duration: 2,
-                ease: 'power1.out',
-                snap: { textContent: 1 },
-                scrollTrigger: {
-                    trigger: stat,
-                    start: 'top 80%'
-                }
-            });
-        });
-
         // Mobile menu toggle
         const hamburger = document.querySelector('.hamburger');
         const navLinks = document.querySelector('.nav-links');
 
         hamburger.addEventListener('click', () => {
             navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
     </script>
 </body>
