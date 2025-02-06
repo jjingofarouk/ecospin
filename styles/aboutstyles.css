@@ -61,7 +61,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('images/about.jpg'); /* Replace with your image path */
+    background-image: url('../images/about.jpg'); /* Replace with your image path */
     background-size: cover;
     background-position: center;
     height: 60vh; /* Adjust the height as needed */
